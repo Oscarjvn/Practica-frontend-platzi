@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        .aside-container{
+            width: 360px;
+            position: absolute;
+            right: 0;
+        }
+
+        .full{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .orders-container{
+            display: flex;
+            flex-direction: column;
+           padding: 24px;
+            width: 300px;
+        }
+
+        .titulo{
+            display: flex;
+            align-items: center;
+
+        }
+        .titulo img{
+            transform: rotate(180deg);
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+        .order{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .img-container, .order div:nth-child(2){
+            display: flex;
+            align-items: center;
+        }
+
+        .img-container figure{
+            margin: 0px;
+        }
+
+
+        .img-container figure img{
+            width: 70px;
+            height: 70px;
+            border-radius: 24px;
+            margin-right: 4px;
+        }
+
+        .img-container p{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+        }
+
+        .order div:nth-child(2) p{
+            font-weight: bold;
+        }
+
+        .orders-container div:nth-child(5){
+            margin: 14px 24px
+        }
+        #lastp{
+            font-weight: bold;
+            color: var(--black);
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            color: var(--white);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        
+
+        @media (max-width: 640px){
+            .aside-container{
+            width: 100%;}
+        }
+        .orders-container{
+           width: 100%;
+        }
+        
+        
+        </style>
+
+        <body>
+            <aside class="aside-container">
+                <div class="full">
+                    <div class="orders-container">
+                        <div class="titulo">
+                            <img src="./Platzi_YardSale_Icons/flechita.svg" alt="">
+                            <h2>My order</h2>
+                        </div>
+            
+                        <div class="order">
+                            <div class="img-container">
+                                <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                                <p>Triumph Tiger</p>
+                            </div>
+                            <div>
+                                <p>$5000</p>
+                                <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                            </div>
+                        </div>
+            
+                        <div class="order">
+                            <div class="img-container">
+                                <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                                <p>Triumph Tiger</p>
+                            </div>
+                            <div>
+                                <p>$5000</p>
+                                <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                            </div>
+                        </div>
+            
+                        <div class="order">
+                            <div class="img-container">
+                                <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                                <p>Triumph Tiger</p>
+                            </div>
+                            <div>
+                                <p>$5000</p>
+                                <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="order">
+                            <div class="img-container">
+                               
+                                <p id="lastp">Total</p>
+                            </div>
+                            <div>
+                                <p>$30000</p>
+                            </div>
+
+                        </div>
+                        <button class="primary-button">checkout</button>
+                    </div>    
+                </div>     
+            </aside>
+        </body>
