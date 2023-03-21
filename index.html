@@ -15,6 +15,49 @@
 <body>
     <nav class="nav-bar">
         <img src="./Platzi_YardSale_Icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="mobile-menu inactive">
+            <ul>
+                <li>
+                    <a href="/">Categories</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Furnitures</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+                
+                
+            </ul>
+            
+            <ul>
+                <li>
+                    <a href="/">My orders</a>
+                </li>
+                <li>
+                    <a href="/">My account</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="/" id="email">mustang2000@gmail.com</a>
+                </li>
+                <li id="last-list">
+                    <a href="/" id="singout">Sign out</a>
+                </li>
+
+            </ul>
+        </div>
         <div class="left-box">
             <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" >
             <ul>
@@ -31,7 +74,7 @@
         <div class="right-box">
             <ul>
                 <li id="desktopMenuEmail">hondansx@gmail.com</li>
-                <li><a href="/"><img src="./Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="shopping-cart"></a></li>
+                <li class="cart-icon"><a href="/"><img src="./Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="shopping-cart"></a></li>
             </ul>
             <div class="desktop-menu inactive">
                 <div>
@@ -51,6 +94,62 @@
             </div>
         </div>
     </nav>
+
+    <aside class="aside-container inactive">
+        <div class="full">
+            <div class="orders-container">
+                <div class="titulo">
+                    <img src="./Platzi_YardSale_Icons/flechita.svg" alt="">
+                    <h2>My order</h2>
+                </div>
+    
+                <div class="order">
+                    <div class="img-container">
+                        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                        <p>Triumph Tiger</p>
+                    </div>
+                    <div>
+                        <p>$5000</p>
+                        <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="order">
+                    <div class="img-container">
+                        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                        <p>Triumph Tiger</p>
+                    </div>
+                    <div>
+                        <p>$5000</p>
+                        <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="order">
+                    <div class="img-container">
+                        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiger800a.jpg/1200px-Tiger800a.jpg" alt="tiger"></figure>
+                        <p>Triumph Tiger</p>
+                    </div>
+                    <div>
+                        <p>$5000</p>
+                        <img src="./Platzi_YardSale_Icons/icon_close.png" alt="">
+                    </div>
+                </div>
+
+                <div class="order">
+                    <div class="img-container">
+                       
+                        <p id="lastp">Total</p>
+                    </div>
+                    <div>
+                        <p>$30000</p>
+                    </div>
+
+                </div>
+                <button class="primary-button">checkout</button>
+            </div>    
+        </div>     
+    </aside>
     <script src="./main.js"></script>
 </body>
 </html>

@@ -14,6 +14,12 @@ margin: 0;
 font-family: 'Quicksand', sans-serif;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 .inactive{
     display: none;
 }
@@ -57,7 +63,7 @@ font-family: 'Quicksand', sans-serif;
     align-items: center;
 }
 
-/* clases de la clase 7*/
+/* clases de la clase 7(desktop-menu)*/
 .desktop-menu{
     position: absolute;
     top: 62px;
@@ -99,7 +105,138 @@ font-family: 'Quicksand', sans-serif;
     color: var(--hospital-green);
 }
 
+/* clases de la clase 8(mobile-menu)*/
+.mobile-menu{
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+.mobile-menu ul{
+    margin-bottom: 62px;
+}
+
+.mobile-menu ul li{
+    list-style: none;
+    margin-top: 34px;
+}
+
+.mobile-menu ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    
+}
+
+#email{
+    font-size: var(--sm);
+    font-weight: 300;
+    
+}
+
+#singout {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+
+}
+
+#singout li{
+   margin-top: 8px;
+
+}
+#last-list{
+    margin-top: 8px;
+}
+
+/* clases del aside shopping cart*/
+.aside-container{
+    width: 360px;
+    position: absolute;
+    right: 0;
+}
+
+.full{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orders-container{
+    display: flex;
+    flex-direction: column;
+   padding: 24px;
+    width: 300px;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+
+}
+.titulo img{
+    transform: rotate(180deg);
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.img-container, .order div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+.img-container figure{
+    margin: 0px;
+}
+
+
+.img-container figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 24px;
+    margin-right: 4px;
+}
+
+.img-container p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+}
+
+.order div:nth-child(2) p{
+    font-weight: bold;
+}
+
+.orders-container div:nth-child(5){
+    margin: 14px 24px
+}
+#lastp{
+    font-weight: bold;
+    color: var(--black);
+}
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    color: var(--white);
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 @media (max-width: 640px){
+    /* estos medias son para desaparecer las pantallas*/
    .menu{
     display: block;
    }
@@ -111,4 +248,21 @@ font-family: 'Quicksand', sans-serif;
    .right-box ul li:nth-child(1){
     display: none;
    }
+
+   .mobile-menu{
+    display: block;
+   }
+   .desktop-menu{
+    display: none;
+   }
+   .inactive{
+    display: none;
+}
+
+/*estos para asignar otros tamaños a las vistas*/
+.aside-container{
+    width: 100%;}
+    .orders-container{
+        width: 100%;
+     }
 }
