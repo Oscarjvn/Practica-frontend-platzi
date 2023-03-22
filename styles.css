@@ -73,6 +73,7 @@ font-family: 'Quicksand', sans-serif;
     border: 1px solid var(--very-light-pink);
     border-radius: 0px 0px 6px 6px;
     padding: 20px 20px 0 20px;
+    background-color: var(--white);
 }
 
 .desktop-menu ul {
@@ -110,6 +111,7 @@ font-family: 'Quicksand', sans-serif;
     display: none;
     position: absolute;
     top: 60px;
+    background-color: var(--white);
 }
 .mobile-menu ul{
     margin-bottom: 62px;
@@ -167,6 +169,7 @@ font-family: 'Quicksand', sans-serif;
     flex-direction: column;
    padding: 24px;
     width: 300px;
+    background-color: var(--white);
 }
 
 .titulo{
@@ -235,6 +238,55 @@ font-family: 'Quicksand', sans-serif;
 
 }
 
+/* clases de la documento 6 (productos) */ 
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    place-content: center;
+    gap: 26px;
+    margin: 5px;
+    padding: 24px  0;
+}  
+
+.product-container img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.princing-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.princing-container p{
+    margin: 0;
+}
+.princing-container figure {
+    margin: 0;
+}
+
+.princing-container figure img{
+    width: 35px;
+    height: 35px;
+}
+
+.princing-container .product-info p:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+
+}
+
+.princing-container .product-info p:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+
+}
+
+
+
 @media (max-width: 640px){
     /* estos medias son para desaparecer las pantallas*/
    .menu{
@@ -265,4 +317,18 @@ font-family: 'Quicksand', sans-serif;
     .orders-container{
         width: 100%;
      }
+
+     .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 140px);
+        place-content: center;
+        gap: 26px;
+
+    }
+    .product-container img {
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
 }
