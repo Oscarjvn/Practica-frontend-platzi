@@ -14,6 +14,11 @@ const asideOrders = document.querySelector(".aside-container")
 //variables para los productos
 const productCardsContainer = document.querySelector(".cards-container");
 
+//variables para desplegar el asideDetailCard
+const asideDescriptionContainer = document.getElementById("aside-container")
+const asideDescriptionContainerCloseImage = document.querySelector(".close-image")
+
+
 
 
 
@@ -21,17 +26,20 @@ console.log(desktopMenuEmail, desktopMenu)
 
 //estas son las declaracion de funciones para abrir o cerrar las pantallas del documento(class list me permite agregar o desaparecer las clases de un elemento que este seleccionado)
 function toggleDesktopMenu(){
+    hideAsideDescriptionContainer()
     asideOrders.classList.add("inactive")
     desktopMenu.classList.toggle("inactive")
 }
 
 
 function toggleMobilepMenu(){
+    hideAsideDescriptionContainer()
     asideOrders.classList.add("inactive")
     mobileMenu.classList.toggle("inactive")
 }
 
 function toggleAsideCart(){  
+    hideAsideDescriptionContainer()
     mobileMenu.classList.add("inactive")
     desktopMenu.classList.add("inactive")
     asideOrders.classList.toggle("inactive")
@@ -65,11 +73,7 @@ productList.push({
     image: "https://cdn1.mecum.com/auctions/ca0822/ca0822-532316/images/1-1658871749103@2x.jpg?1660951736000",
 })
 
-productList.push({
-    name: "alto gato",
-    price: 45000,
-    image: "C:/Users/oscar y chuck/Desktop/54299ab7c771c5c563f7179d3f16aab1.jpg",
-})
+
 
 
 
@@ -94,6 +98,8 @@ for(let product of productList){
 
     let productImg = document.createElement("img")
     productImg.setAttribute("src", product.image)
+    productImg.addEventListener("click", showAsideDescriptionContainer)
+
     let princingContainer = document.createElement("div")
     princingContainer.classList.add("princing-container")
     
@@ -118,5 +124,23 @@ for(let product of productList){
 
     productCardsContainer.appendChild(productContainer)
 
-}            
+}   
+
+    
+ function showAsideDescriptionContainer(){
+    mobileMenu.classList.add("inactive")
+    desktopMenu.classList.add("inactive")
+    asideOrders.classList.add("inactive")
+    asideDescriptionContainer.classList.remove("inactive")
+    }
+
+    
+    asideDescriptionContainerCloseImage.addEventListener("click", hideAsideDescriptionContainer);
+    
+    function hideAsideDescriptionContainer(){
+
+        asideDescriptionContainer.classList.add("inactive")
+    }
+
+
 console.log(productList)
